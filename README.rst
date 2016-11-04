@@ -2,6 +2,10 @@
 ems-cli
 =======
 
+.. image:: https://codeclimate.com/github/tomi77/ems-cli/badges/gpa.svg
+   :target: https://codeclimate.com/github/tomi77/ems-cli
+   :alt: Code Climate
+
 CLI for EVO Media Server
 
 Commands
