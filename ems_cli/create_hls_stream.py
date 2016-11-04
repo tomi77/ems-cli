@@ -72,6 +72,43 @@ def subparser(parser):
         '--chunk-on-idr', type=int, choices=[0, 1], dest='chunkOnIDR',
         help='if (1) chunking is performed only on IDR, otherwise  whenever '
              'chunk length is achieved')
+    subparser.add_argument(
+        '--drm-type', type=str,
+        choices=['none', 'evo', 'SAMPLE-AES', 'verimatrix'],
+        dest='drmType', help='type of DRM encryption to use')
+    subparser.add_argument(
+        '--aes-key-count', type=int, dest='AESKeyCount',
+        help='number of keys that will be automatically generated and '
+             'rotated over while encrypting this HLS stream')
+    subparser.add_argument(
+        '--audio-only', type=int, choices=[0, 1],
+        dest='audioOnly', help='if (1), stream will be audio only')
+    subparser.add_argument(
+        '--hls-resume', type=int, choices=[0, 1], dest='hlsResume',
+        help='if (1), HLS will resume in appending segments to previously '
+             'created child playlist')
+    subparser.add_argument(
+        '--cleanup-on-close', type=int, choices=[0, 1], dest='cleanupOnClose',
+        help='if (1), corresponding hls files to a stream will be deleted '
+             'if the said stream is removed or shut down or disconnected')
+    subparser.add_argument(
+        '--use-byte-range', type=int, choices=[0, 1], dest='useByteRange',
+        help='if (1), will use the EXT-X-BYTERANGE feature of HLS (version '
+             '4 and up)')
+    subparser.add_argument(
+        '--file-length', type=int, dest='fileLength',
+        help='size of file before chunking it to another file (when '
+             '--use-byte-range=1)')
+    subparser.add_argument(
+        '--use-system-time', type=int, choices=[0, 1], dest='useSystemTime',
+        help='if (1), uses UTC in playlist time stamp otherwise will use '
+             'the local server time')
+    subparser.add_argument(
+        '--offset-time', type=int, dest='offsetTime', help='?')
+    subparser.add_argument(
+        '--start-offset', type=int, dest='startOffset',
+        help='start offset time (in seconds) for the playback of the '
+             'playlist (HLS >= v.6)')
 
 
 def main():
