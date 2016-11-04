@@ -1,17 +1,22 @@
 import ems_cli
-from ems_cli.utils import api_wrapper, get_parser
+from ems_cli.utils import BaseCommand
+
+
+class Command(BaseCommand):
+    description = 'EMS cli'
+
+    def get_subparser(self, parser):
+        return parser.add_subparsers(help='command')
+
+    def _fill_arguments(self, parser):
+        subparsers = self.get_subparser(parser)
+
+        ems_cli.add_group_name_alias.Command(subparsers).fill_arguments()
+        ems_cli.add_stream_alias.Command(subparsers).fill_arguments()
+        ems_cli.create_dash_stream.Command(subparsers).fill_arguments()
+        ems_cli.create_hds_stream.Command(subparsers).fill_arguments()
+        ems_cli.create_hls_stream.Command(subparsers).fill_arguments()
 
 
 def main():
-    # create the top-level parser
-    parser = get_parser('EMS cli')
-    subparsers = parser.add_subparsers(help='command')
-
-    ems_cli.add_group_name_alias.subparser(subparsers)
-    ems_cli.add_stream_alias.subparser(subparsers)
-    ems_cli.create_dash_stream.subparser(subparsers)
-    ems_cli.create_hds_stream.subparser(subparsers)
-    ems_cli.create_hls_stream.subparser(subparsers)
-
-    args = parser.parse_args()
-    api_wrapper(parser, **args.__dict__)
+    Command().run()
