@@ -62,3 +62,39 @@ Create an HTTP Live Stream (HLS) out of an existing H.264/AAC stream.
 .. sourcecode:: sh
 
  ems-create-hls-stream --uri="http://127.0.0.1:7777" --bandwidths=128 --group-name=hls --playlist-type=rolling --playlist-length=10 --chunk-length=5 hlstest "/MyWebRoot/"
+
+ems-create-ingest-point
+-----------------------
+
+Creates an RTMP ingest point.
+
+.. sourcecode:: sh
+
+ ems-create-ingest-point --uri="http://127.0.0.1:7777" theIngestPoint useMeToViewStream
+
+ems-create-mss-stream
+---------------------
+
+Create a Microsoft Smooth Stream (MSS) out of an existing H.264/AAC stream.
+
+.. sourcecode:: sh
+
+ ems-create-mss-stream --uri="http://127.0.0.1:7777" --group-name=mss testpullStream "../evo-webroot"
+
+ems-flush-group-name-aliases
+----------------------------
+
+Invalidates all group name aliases.
+
+.. sourcecode:: sh
+
+ ems-flush-group-name-aliases --uri="http://127.0.0.1:7777"
+
+ems-flush-stream-aliases
+------------------------
+
+Invalidates all stream aliases.
+
+.. sourcecode:: sh
+
+ ems-flush-stream-aliases --uri="http://127.0.0.1:7777"
