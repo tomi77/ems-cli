@@ -6,10 +6,15 @@ class Command(BaseCommand):
 
     description = 'creates secondary name(s) for group name'
 
-    def _fill_arguments(self, parser):
-        parser.add_argument(
+    quiet_fields = {
+        'groupName': 'group name',
+        'aliasName': 'alias name',
+    }
+
+    def fill_arguments(self):
+        self.parser.add_argument(
             'groupName', type=str, help='the original group name')
-        parser.add_argument(
+        self.parser.add_argument(
             'aliasName', type=str,
             help='the alias alternative to the group name')
 

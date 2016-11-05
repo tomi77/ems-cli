@@ -5,11 +5,8 @@ from ems_cli.utils import BaseCommand
 class Command(BaseCommand):
     description = 'EMS cli'
 
-    def get_subparser(self, parser):
-        return parser.add_subparsers(help='command')
-
-    def _fill_arguments(self, parser):
-        subparsers = self.get_subparser(parser)
+    def fill_arguments(self):
+        subparsers = self.parser.add_subparsers(help='command')
 
         ems_cli.add_group_name_alias.Command(subparsers).fill_arguments()
         ems_cli.add_stream_alias.Command(subparsers).fill_arguments()

@@ -1,4 +1,6 @@
 import argparse
+import json
+import sys
 
 import pyems
 
@@ -6,6 +8,7 @@ import pyems
 class BaseCommand(object):
     name = None
     description = None
+    quiet_fields = {}
 
     def __init__(self, subparsers=None):
         if subparsers is not None:
@@ -15,12 +18,24 @@ class BaseCommand(object):
             self.parser = argparse.ArgumentParser(description=self.description)
             self.parser.add_argument('--uri', help='connection URI',
                                      required=True)
+            self.parser.add_argument('-v', '--verbose', action='store_true',
+                                     help='verbose mode')
 
     def fill_arguments(self):
-        self._fill_arguments(self.parser)
+        raise NotImplementedError()
 
-    def _fill_arguments(self, parser):
-        pass
+    def format_quiet_msg(self, data):
+        if isinstance(data, dict):
+            data = [data]
+
+        return '\n\n'.join(['\n'.join(['%s: %s' % (desc, row[name])
+                                       for name, desc
+                                       in self.quiet_fields.items()])
+                            for row in data])
+
+    @staticmethod
+    def format_verbose_msg(data):
+        return json.dumps(data, indent=2)
 
     def run(self):
         self.fill_arguments()
@@ -28,11 +43,15 @@ class BaseCommand(object):
         args = self.parser.parse_args()
         self.api_wrapper(**args.__dict__)
 
-    def api_wrapper(self, uri=None, **kwargs):
+    def api_wrapper(self, uri=None, verbose=False, **kwargs):
         kwargs = dict([(k, v) for k, v in kwargs.items() if v is not None])
         try:
             api = pyems.Api(uri)
             api_func = getattr(api, self.name)
-            api_func(**kwargs)
+            data = api_func(**kwargs)
         except pyems.EvoStreamException as e:
-            self.parser.error(e)
+            sys.stderr.write('%s\n' % e)
+        else:
+            msg = self.format_verbose_msg(data) \
+                if verbose else self.format_quiet_msg(data)
+            sys.stdout.write('%s\n' % msg)
