@@ -134,3 +134,12 @@ Detailed set of information about a stream.
 .. sourcecode:: sh
 
  ems-get-stream-info --uri="http://127.0.0.1:7777" testpullStream
+
+ems-get-streams-count
+---------------------
+
+Number of active streams.
+
+.. sourcecode:: sh
+
+ ems-get-streams-count --uri="http://127.0.0.1:7777"

@@ -27,6 +27,7 @@ setup(
             'ems-get-group-name-by-alias = ems_cli.get_group_name_by_alias:main',
             'ems-get-stream-info-by-id = ems_cli.get_stream_info:main_id',
             'ems-get-stream-info-by-name = ems_cli.get_stream_info:main_name',
+            'ems-get-streams-count = ems_cli.get_streams_count:main',
             'ems-list-streams = ems_cli.list_streams:main',
         ]
     },
