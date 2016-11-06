@@ -124,7 +124,7 @@ Detailed set of information about a stream.
 
 .. sourcecode:: sh
 
- ems-get-stream-info --uri="http://127.0.0.1:7777" 1
+ ems-get-stream-info-by-id --uri="http://127.0.0.1:7777" 1
 
 ems-get-stream-info-by-name
 ---------------------------
@@ -133,7 +133,7 @@ Detailed set of information about a stream.
 
 .. sourcecode:: sh
 
- ems-get-stream-info --uri="http://127.0.0.1:7777" testpullStream
+ ems-get-stream-info-by-name --uri="http://127.0.0.1:7777" testpullStream
 
 ems-get-streams-count
 ---------------------
