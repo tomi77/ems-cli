@@ -31,6 +31,7 @@ setup(
             'ems-is-stream-running-by-id = ems_cli.is_stream_running:main_id',
             'ems-is-stream-running-by-name = ems_cli.is_stream_running:main_name',
             'ems-list-config = ems_cli.list_config:main',
+            'ems-list-group-name-aliases = ems_cli.list_group_name_aliases:main',
             'ems-list-streams = ems_cli.list_streams:main',
         ]
     },

@@ -170,3 +170,12 @@ List with all push/pull configurations.
 .. sourcecode:: sh
 
  ems-list-config --uri="http://127.0.0.1:7777"
+
+ems-list-group-name-aliases
+---------------------------
+
+A complete list of group name aliases.
+
+.. sourcecode:: sh
+
+ ems-list-group-name-aliases --uri="http://127.0.0.1:7777"
