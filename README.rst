@@ -206,3 +206,10 @@ A complete list of aliases.
 .. sourcecode:: sh
 
  ems-list-stream-aliases --uri="http://127.0.0.1:7777"
+
+ems-list-streams
+----------------
+
+.. sourcecode:: sh
+
+ ems-list-streams --uri="http://127.0.0.1:7777"
