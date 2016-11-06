@@ -179,3 +179,12 @@ A complete list of group name aliases.
 .. sourcecode:: sh
 
  ems-list-group-name-aliases --uri="http://127.0.0.1:7777"
+
+ems-list-http-streaming-sessions
+--------------------------------
+
+All currently active HTTP streaming sessions.
+
+.. sourcecode:: sh
+
+ ems-list-http-streaming-sessions --uri="http://127.0.0.1:7777"
