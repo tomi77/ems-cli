@@ -24,6 +24,7 @@ setup(
             'ems-flush-group-name-aliases = ems_cli.flush_group_name_aliases:main',
             'ems-flush-stream-aliases = ems_cli.flush_stream_aliases:main',
             'ems-get-config-info = ems_cli.get_config_info:main',
+            'ems-get-group-name-by-alias = ems_cli.get_group_name_by_alias:main',
             'ems-list-streams = ems_cli.list_streams:main',
         ]
     },

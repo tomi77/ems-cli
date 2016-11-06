@@ -107,3 +107,12 @@ Information of the stream by the configId.
 .. sourcecode:: sh
 
  ems-get-config-info --uri="http://127.0.0.1:7777" 1
+
+ems-get-group-name-by-alias
+---------------------------
+
+Returns the group name given the alias name.
+
+.. sourcecode:: sh
+
+ ems-get-group-name-by-alias --uri="http://127.0.0.1:7777" TestGroupAlias
