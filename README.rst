@@ -213,3 +213,12 @@ ems-list-streams
 .. sourcecode:: sh
 
  ems-list-streams --uri="http://127.0.0.1:7777"
+
+ems-list-streams-ids
+--------------------
+
+A list of IDs for every active stream.
+
+.. sourcecode:: sh
+
+ ems-list-streams-ids --uri="http://127.0.0.1:7777"

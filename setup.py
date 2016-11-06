@@ -36,6 +36,7 @@ setup(
             'ems-list-ingest-points = ems_cli.list_ingest_points:main',
             'ems-list-stream-aliases = ems_cli.list_stream_aliases:main',
             'ems-list-streams = ems_cli.list_streams:main',
+            'ems-list-streams-ids = ems_cli.list_streams_ids:main',
         ]
     },
     classifiers=[
