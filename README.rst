@@ -161,3 +161,12 @@ Checks a specific stream if it is running or not.
 .. sourcecode:: sh
 
  ems-is-stream-running-by-name --uri="http://127.0.0.1:7777" testStream
+
+ems-list-config
+---------------
+
+List with all push/pull configurations.
+
+.. sourcecode:: sh
+
+ ems-list-config --uri="http://127.0.0.1:7777"

@@ -30,6 +30,7 @@ setup(
             'ems-get-streams-count = ems_cli.get_streams_count:main',
             'ems-is-stream-running-by-id = ems_cli.is_stream_running:main_id',
             'ems-is-stream-running-by-name = ems_cli.is_stream_running:main_name',
+            'ems-list-config = ems_cli.list_config:main',
             'ems-list-streams = ems_cli.list_streams:main',
         ]
     },
