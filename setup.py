@@ -33,6 +33,7 @@ setup(
             'ems-list-config = ems_cli.list_config:main',
             'ems-list-group-name-aliases = ems_cli.list_group_name_aliases:main',
             'ems-list-http-streaming-sessions = ems_cli.list_http_streaming_sessions:main',
+            'ems-list-ingest-points = ems_cli.list_ingest_points:main',
             'ems-list-streams = ems_cli.list_streams:main',
         ]
     },

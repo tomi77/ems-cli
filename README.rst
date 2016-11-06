@@ -188,3 +188,12 @@ All currently active HTTP streaming sessions.
 .. sourcecode:: sh
 
  ems-list-http-streaming-sessions --uri="http://127.0.0.1:7777"
+
+ems-list-ingest-points
+----------------------
+
+The currently available Ingest Points.
+
+.. sourcecode:: sh
+
+ ems-list-ingest-points --uri="http://127.0.0.1:7777"
