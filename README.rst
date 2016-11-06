@@ -197,3 +197,12 @@ The currently available Ingest Points.
 .. sourcecode:: sh
 
  ems-list-ingest-points --uri="http://127.0.0.1:7777"
+
+ems-list-stream-aliases
+-----------------------
+
+A complete list of aliases.
+
+.. sourcecode:: sh
+
+ ems-list-stream-aliases --uri="http://127.0.0.1:7777"
