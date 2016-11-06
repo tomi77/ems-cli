@@ -23,6 +23,7 @@ setup(
             'ems-create-mss-stream = ems_cli.create_mss_stream:main',
             'ems-flush-group-name-aliases = ems_cli.flush_group_name_aliases:main',
             'ems-flush-stream-aliases = ems_cli.flush_stream_aliases:main',
+            'ems-get-config-info = ems_cli.get_config_info:main',
             'ems-list-streams = ems_cli.list_streams:main',
         ]
     },

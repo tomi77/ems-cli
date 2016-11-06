@@ -98,3 +98,12 @@ Invalidates all stream aliases.
 .. sourcecode:: sh
 
  ems-flush-stream-aliases --uri="http://127.0.0.1:7777"
+
+ems-get-config-info
+-------------------
+
+Information of the stream by the configId.
+
+.. sourcecode:: sh
+
+ ems-get-config-info --uri="http://127.0.0.1:7777" 1
