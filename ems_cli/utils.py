@@ -16,8 +16,8 @@ class BaseCommand(object):
                                                 help=self.description)
         else:
             self.parser = argparse.ArgumentParser(description=self.description)
-            self.parser.add_argument('--uri', help='connection URI',
-                                     required=True)
+            self.parser.add_argument('--connection-uri', help='connection URI',
+                                     dest="connection_uri", required=True)
             self.parser.add_argument('-v', '--verbose', action='store_true',
                                      help='verbose mode')
 
@@ -43,10 +43,10 @@ class BaseCommand(object):
         args = self.parser.parse_args()
         self.api_wrapper(**args.__dict__)
 
-    def api_wrapper(self, uri=None, verbose=False, **kwargs):
+    def api_wrapper(self, connection_uri=None, verbose=False, **kwargs):
         kwargs = dict([(k, v) for k, v in kwargs.items() if v is not None])
         try:
-            api = pyems.Api(uri)
+            api = pyems.Api(connection_uri)
             api_func = getattr(api, self.name)
             data = api_func(**kwargs)
         except pyems.EvoStreamException as e:
