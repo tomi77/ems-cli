@@ -143,3 +143,21 @@ Number of active streams.
 .. sourcecode:: sh
 
  ems-get-streams-count --uri="http://127.0.0.1:7777"
+
+ems-is-stream-running-by-id
+---------------------------
+
+Checks a specific stream if it is running or not.
+
+.. sourcecode:: sh
+
+ ems-is-stream-running-by-id --uri="http://127.0.0.1:7777" 1
+
+ems-is-stream-running-by-name
+-----------------------------
+
+Checks a specific stream if it is running or not.
+
+.. sourcecode:: sh
+
+ ems-is-stream-running-by-name --uri="http://127.0.0.1:7777" testStream
