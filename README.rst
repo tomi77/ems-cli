@@ -222,3 +222,12 @@ A list of IDs for every active stream.
 .. sourcecode:: sh
 
  ems-list-streams-ids --connection-uri="http://127.0.0.1:7777"
+
+ems-pull-stream
+---------------
+
+Pull in a stream from an external source.
+
+.. sourcecode:: sh
+
+ ems-pull-stream --connection-uri="http://127.0.0.1:7777" --local-stream-name=testpullStream "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4"
