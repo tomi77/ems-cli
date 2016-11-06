@@ -116,3 +116,21 @@ Returns the group name given the alias name.
 .. sourcecode:: sh
 
  ems-get-group-name-by-alias --uri="http://127.0.0.1:7777" TestGroupAlias
+
+ems-get-stream-info-by-id
+-------------------------
+
+Detailed set of information about a stream.
+
+.. sourcecode:: sh
+
+ ems-get-stream-info --uri="http://127.0.0.1:7777" 1
+
+ems-get-stream-info-by-name
+---------------------------
+
+Detailed set of information about a stream.
+
+.. sourcecode:: sh
+
+ ems-get-stream-info --uri="http://127.0.0.1:7777" testpullStream
