@@ -7,7 +7,9 @@ class Command(BaseCommand):
     description = 'detailed set of information about a stream'
 
     quiet_fields = {
-        'groupName': 'group name',
+        'ip': 'ip',
+        'name': 'name',
+        'uniqueId': 'id',
     }
 
     def __init__(self, subparsers=None, type='id'):
