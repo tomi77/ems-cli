@@ -40,6 +40,8 @@ setup(
             'ems-pull-stream = ems_cli.pull_stream:main',
             'ems-push-stream = ems_cli.push_stream:main',
             'ems-record = ems_cli.record:main',
+            'ems-remove-config-by-id = ems_cli.remove_config:main_id',
+            'ems-remove-config-by-group-name = ems_cli.remove_config:main_name',
         ]
     },
     classifiers=[

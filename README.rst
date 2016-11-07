@@ -249,3 +249,21 @@ Records any inbound stream.
 .. sourcecode:: sh
 
  ems-record --connection-uri="http://127.0.0.1:7777" --type=mp4 --overwrite=1 testpullstream "../media/testRecord"
+
+ems-remove-config-by-id
+-----------------------
+
+Stop the stream and remove the corresponding configuration entry.
+
+.. sourcecode:: sh
+
+ ems-remove-config-by-id --connection-uri="http://127.0.0.1:7777" 55
+
+ems-remove-config-by-group-name
+-------------------------------
+
+Stop the stream and remove the corresponding configuration entry.
+
+.. sourcecode:: sh
+
+ ems-remove-config-by-group-name --connection-uri="http://127.0.0.1:7777" hls
