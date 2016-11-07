@@ -7,6 +7,7 @@ class Command(BaseCommand):
     description = 'detailed description of all active streams'
 
     quiet_fields = {
+        'uniqueId': 'id',
         'ip': 'ip',
         'name': 'name',
     }

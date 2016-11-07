@@ -8,7 +8,6 @@ class Command(BaseCommand):
 
     quiet_fields = {
         'configId': 'id',
-        'groupName': 'group name',
         'localStreamName': 'local stream name',
     }
 

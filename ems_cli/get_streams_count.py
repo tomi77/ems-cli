@@ -7,7 +7,7 @@ class Command(BaseCommand):
     description = 'number of active streams'
 
     quiet_fields = {
-        'streamCount': 'count',
+        'count': 'count',
     }
 
     def fill_arguments(self):
