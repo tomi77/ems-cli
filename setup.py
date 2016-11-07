@@ -13,7 +13,6 @@ setup(
     long_description=open('README.rst').read(),
     entry_points={
         'console_scripts': [
-            'ems = ems_cli.__main__:main',
             'ems-add-group-name-alias = ems_cli.add_group_name_alias:main',
             'ems-add-stream-alias = ems_cli.add_stream_alias:main',
             'ems-create-dash-stream = ems_cli.create_dash_stream:main',
