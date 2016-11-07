@@ -38,6 +38,7 @@ setup(
             'ems-list-streams = ems_cli.list_streams:main',
             'ems-list-streams-ids = ems_cli.list_streams_ids:main',
             'ems-pull-stream = ems_cli.pull_stream:main',
+            'ems-push-stream = ems_cli.push_stream:main',
         ]
     },
     classifiers=[

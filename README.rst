@@ -231,3 +231,12 @@ Pull in a stream from an external source.
 .. sourcecode:: sh
 
  ems-pull-stream --connection-uri="http://127.0.0.1:7777" --local-stream-name=testpullStream "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4"
+
+ems-push-stream
+---------------
+
+Push a local stream to an external destination.
+
+.. sourcecode:: sh
+
+ ems-push-stream --connection-uri="http://127.0.0.1:7777" --local-stream-name=testpullstream --target-stream-name=testpushStream "rtmp://DestinationAddress/live"
