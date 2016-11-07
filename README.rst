@@ -240,3 +240,12 @@ Push a local stream to an external destination.
 .. sourcecode:: sh
 
  ems-push-stream --connection-uri="http://127.0.0.1:7777" --local-stream-name=testpullstream --target-stream-name=testpushStream "rtmp://DestinationAddress/live"
+
+ems-record
+----------
+
+Records any inbound stream.
+
+.. sourcecode:: sh
+
+ ems-record --connection-uri="http://127.0.0.1:7777" --type=mp4 --overwrite=1 testpullstream "../media/testRecord"
