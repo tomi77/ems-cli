@@ -269,3 +269,12 @@ Remove an alias of a group.
 .. sourcecode:: sh
 
  ems-remove-group-name-alias --connection-uri="http://127.0.0.1:7777" TestGroupAlias
+
+ems-remove-ingest-point
+-----------------------
+
+Remove an RTMP ingest point.
+
+.. sourcecode:: sh
+
+ ems-remove-ingest-point --connection-uri="http://127.0.0.1:7777" theIngestPoint
