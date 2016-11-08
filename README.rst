@@ -11,13 +11,6 @@ CLI for EVO Media Server
 Commands
 ========
 
-ems
----
-
-.. sourcecode:: sh
-
- ems --connection-uri="http://127.0.0.1:7777" add_stream_alias --expire-period=-300 bunny video1
-
 ems-add-group-name-alias
 ------------------------
 
