@@ -41,6 +41,7 @@ setup(
             'ems-record = ems_cli.record:main',
             'ems-remove-config-by-id = ems_cli.remove_config:main_id',
             'ems-remove-config-by-group-name = ems_cli.remove_config:main_name',
+            'ems-remove-group-name-alias = ems_cli.remove_group_name_alias:main',
         ]
     },
     classifiers=[

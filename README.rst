@@ -260,3 +260,12 @@ Stop the stream and remove the corresponding configuration entry.
 .. sourcecode:: sh
 
  ems-remove-config-by-group-name --connection-uri="http://127.0.0.1:7777" hls
+
+ems-remove-group-name-alias
+---------------------------
+
+Remove an alias of a group.
+
+.. sourcecode:: sh
+
+ ems-remove-group-name-alias --connection-uri="http://127.0.0.1:7777" TestGroupAlias
