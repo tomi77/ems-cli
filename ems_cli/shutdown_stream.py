@@ -7,7 +7,7 @@ class Command(BaseCommand):
     description = 'Terminate a stream'
 
     quiet_fields = {
-        'aliasName': 'alias'
+        'streamInfo': 'stream info'
     }
 
     def __init__(self, subparsers=None, type='id'):
