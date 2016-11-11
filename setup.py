@@ -43,7 +43,9 @@ setup(
             'ems-remove-config-by-group-name = ems_cli.remove_config:main_name',
             'ems-remove-group-name-alias = ems_cli.remove_group_name_alias:main',
             'ems-remove-ingest-point = ems_cli.remove_ingest_point:main',
-            'ems-remove-stream-alias = ems_cli.remove_stream_alias:main'
+            'ems-remove-stream-alias = ems_cli.remove_stream_alias:main',
+            'ems-shutdown-stream-by-id = ems_cli.shutdown_stream:main_id',
+            'ems-shutdown-stream-by-name = ems_cli.shutdown_stream:main_name',
         ]
     },
     classifiers=[

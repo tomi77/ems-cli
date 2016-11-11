@@ -279,11 +279,29 @@ Remove an RTMP ingest point.
 
  ems-remove-ingest-point --connection-uri="http://127.0.0.1:7777" theIngestPoint
 
-remove_stream_alias
--------------------
+ems-remove-stream-alias
+-----------------------
 
 Remove an alias of a stream.
 
 .. sourcecode:: sh
 
  ems-remove-stream-alias --connection-uri="http://127.0.0.1:7777" video1
+
+ems-shutdown-stream-by-id
+-------------------------
+
+Terminate a stream.
+
+.. sourcecode:: sh
+
+ ems-shutdown-stream-by-id --connection-uri="http://127.0.0.1:7777" 55
+
+ems-shutdown-stream-by-name
+---------------------------
+
+Terminate a stream.
+
+.. sourcecode:: sh
+
+ ems-shutdown-stream-by-name --connection-uri="http://127.0.0.1:7777" testpullstream
