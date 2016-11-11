@@ -8,6 +8,13 @@ ems-cli
 
 CLI for EVO Media Server
 
+Installation
+============
+
+.. sourcecode:: sh
+
+ pip install ems-cli
+
 Commands
 ========
 
