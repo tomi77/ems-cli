@@ -46,6 +46,7 @@ setup(
             'ems-remove-stream-alias = ems_cli.remove_stream_alias:main',
             'ems-shutdown-stream-by-id = ems_cli.shutdown_stream:main_id',
             'ems-shutdown-stream-by-name = ems_cli.shutdown_stream:main_name',
+            'ems-transcode = ems_cli.transcode:main',
         ]
     },
     classifiers=[

@@ -305,3 +305,12 @@ Terminate a stream.
 .. sourcecode:: sh
 
  ems-shutdown-stream-by-name --connection-uri="http://127.0.0.1:7777" testpullstream
+
+ems-transcode
+-------------
+
+Change the compression characteristics of an audio/video stream.
+
+.. sourcecode:: sh
+
+ ems-transcode --connection-uri="http://127.0.0.1:7777" --group_name=group --video-bitrates=200k "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4" stream1
