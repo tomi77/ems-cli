@@ -2,13 +2,15 @@ from setuptools import find_packages, setup
 
 setup(
     name='ems-cli',
-    version='0.1.0',
+    version='0.1.0b1',
     packages=find_packages(),
     url='https://github.com/tomi77/ems-cli',
     license='MIT',
     author='Tomasz Jakub Rup',
     author_email='tomasz.rup@gmail.com',
-    install_requires=['pyems'],
+    install_requires=[
+        'pyems >= 0.1.2',
+    ],
     description='CLI for EVO Media Server',
     long_description=open('README.rst').read(),
     entry_points={
