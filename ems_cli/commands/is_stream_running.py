@@ -1,15 +1,13 @@
-from .utils import BaseCommand
+from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'get_stream_info'
+    name = 'is_stream_running'
 
-    description = 'detailed set of information about a stream'
+    description = 'checks a specific stream if it is running or not'
 
     quiet_fields = {
-        'ip': 'ip',
-        'name': 'name',
-        'uniqueId': 'id',
+        'Running': 'running?',
     }
 
     def __init__(self, subparsers=None, type='id'):

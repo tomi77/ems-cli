@@ -1,13 +1,15 @@
-from .utils import BaseCommand
+from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'shutdown_stream'
+    name = 'get_stream_info'
 
-    description = 'Terminate a stream'
+    description = 'detailed set of information about a stream'
 
     quiet_fields = {
-        'streamInfo': 'stream info'
+        'ip': 'ip',
+        'name': 'name',
+        'uniqueId': 'id',
     }
 
     def __init__(self, subparsers=None, type='id'):
@@ -21,10 +23,6 @@ class Command(BaseCommand):
         else:
             self.parser.add_argument(
                 'localStreamName', type=str, help='the name of the stream')
-        self.parser.add_argument(
-            '--permanently', type=int, choices=[0, 1],
-            help='if (1), the corresponding push/pull configuration will '
-                 'also be terminated')
 
 
 def main_id():

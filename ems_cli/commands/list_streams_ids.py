@@ -1,4 +1,4 @@
-from .utils import BaseCommand
+from . import BaseCommand
 
 
 class Command(BaseCommand):

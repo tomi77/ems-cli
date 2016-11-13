@@ -1,12 +1,13 @@
-from .utils import BaseCommand
+from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'list_config'
+    name = 'get_streams_count'
 
-    description = 'list with all push/pull configurations'
+    description = 'number of active streams'
 
     quiet_fields = {
+        'count': 'count',
     }
 
     def fill_arguments(self):

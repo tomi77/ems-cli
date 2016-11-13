@@ -1,10 +1,10 @@
-from .utils import BaseCommand
+from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'flush_group_name_aliases'
+    name = 'flush_stream_aliases'
 
-    description = 'invalidates all group name aliases'
+    description = 'invalidates all stream aliases'
 
     def fill_arguments(self):
         pass
@@ -14,7 +14,7 @@ class Command(BaseCommand):
 
     @staticmethod
     def format_verbose_msg(data):
-        return 'All group name aliases are flushed'
+        return 'All aliases are flushed'
 
 
 def main():
