@@ -1,4 +1,4 @@
-from ems_cli.utils import BaseCommand
+from .utils import BaseCommand
 
 
 class Command(BaseCommand):
