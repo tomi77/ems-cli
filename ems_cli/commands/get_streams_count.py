@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'get_streams_count'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'number of active streams'
 

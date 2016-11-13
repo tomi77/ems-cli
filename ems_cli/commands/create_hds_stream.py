@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'create_hds_stream'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'create an HDS (HTTP Dynamic Streaming) stream out of an ' \
                   'existing H.264/AAC stream'

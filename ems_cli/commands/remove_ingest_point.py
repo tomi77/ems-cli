@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'remove_ingest_point'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'remove an RTMP ingest point'
 

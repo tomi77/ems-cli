@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'push_stream'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'push a local stream to an external destination'
 

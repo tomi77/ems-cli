@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'get_config_info'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'information of the stream by the configId'
 

@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'record'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'records any inbound stream'
 

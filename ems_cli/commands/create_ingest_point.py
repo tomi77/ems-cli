@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'create_ingest_point'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'creates an RTMP ingest point'
 

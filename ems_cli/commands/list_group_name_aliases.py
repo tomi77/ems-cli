@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'list_group_name_aliases'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'a complete list of group name aliases'
 

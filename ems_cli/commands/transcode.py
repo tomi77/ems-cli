@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'transcode'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'change the compression characteristics of an ' \
                   'audio/video stream'

@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'list_streams'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'detailed description of all active streams'
 

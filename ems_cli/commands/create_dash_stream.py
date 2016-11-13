@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'create_dash_stream'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'create Dynamic Adaptive Streaming over HTTP (DASH) out ' \
                   'of an existing H.264/AAC stream'

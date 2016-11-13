@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'list_http_streaming_sessions'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'all currently active HTTP streaming sessions'
 

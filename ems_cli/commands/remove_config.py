@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'remove_config'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'stop the stream and remove the corresponding ' \
                   'configuration entry'

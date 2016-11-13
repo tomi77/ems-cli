@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'pull_stream'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'pull in a stream from an external source'
 

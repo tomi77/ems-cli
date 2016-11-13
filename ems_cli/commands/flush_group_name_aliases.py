@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'flush_group_name_aliases'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'invalidates all group name aliases'
 

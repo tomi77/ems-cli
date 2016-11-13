@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'add_group_name_alias'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'creates secondary name(s) for group name'
 

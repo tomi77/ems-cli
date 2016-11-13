@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'list_streams_ids'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'a list of IDs for every active stream'
 

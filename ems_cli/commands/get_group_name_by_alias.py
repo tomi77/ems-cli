@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'get_group_name_by_alias'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'returns the group name given the alias name'
 

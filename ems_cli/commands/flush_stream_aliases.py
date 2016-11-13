@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'flush_stream_aliases'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'invalidates all stream aliases'
 

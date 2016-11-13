@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'add_stream_alias'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'create secondary name(s) for internal streams'
 

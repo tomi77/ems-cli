@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'remove_stream_alias'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'removes an alias of a stream'
 

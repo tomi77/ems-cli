@@ -1,8 +1,10 @@
+import os
+
 from . import BaseCommand
 
 
 class Command(BaseCommand):
-    name = 'is_stream_running'
+    name = os.path.splitext(os.path.basename(__file__))[0]
 
     description = 'checks a specific stream if it is running or not'
 
