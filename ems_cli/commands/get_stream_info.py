@@ -1,17 +1,18 @@
 import os
 
 from . import BaseCommand
+from ..i18n import _
 
 
 class Command(BaseCommand):
     name = os.path.splitext(os.path.basename(__file__))[0]
 
-    description = 'detailed set of information about a stream'
+    description = _('detailed set of information about a stream')
 
     quiet_fields = {
-        'ip': 'ip',
-        'name': 'name',
-        'uniqueId': 'id',
+        'ip': _('ip'),
+        'name': _('name'),
+        'uniqueId': _('id'),
     }
 
     def __init__(self, subparsers=None, type='id'):
@@ -21,10 +22,10 @@ class Command(BaseCommand):
     def fill_arguments(self):
         if self.type == 'id':
             self.parser.add_argument(
-                'id', type=int, help='the uniqueId of the stream')
+                'id', type=int, help=_('the uniqueId of the stream'))
         else:
             self.parser.add_argument(
-                'localStreamName', type=str, help='the name of the stream')
+                'localStreamName', type=str, help=_('the name of the stream'))
 
 
 def main_id():

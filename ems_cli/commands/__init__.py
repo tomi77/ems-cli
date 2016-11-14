@@ -4,6 +4,8 @@ import sys
 
 import pyems
 
+from ..i18n import _
+
 
 class BaseCommand(object):
     name = None
@@ -16,10 +18,11 @@ class BaseCommand(object):
                                                 help=self.description)
         else:
             self.parser = argparse.ArgumentParser(description=self.description)
-            self.parser.add_argument('--connection-uri', help='connection URI',
+            self.parser.add_argument('--connection-uri',
+                                     help=_('connection URI'),
                                      dest="connection_uri", required=True)
             self.parser.add_argument('-v', '--verbose', action='store_true',
-                                     help='verbose mode')
+                                     help=_('verbose mode'))
 
     def fill_arguments(self):
         raise NotImplementedError()

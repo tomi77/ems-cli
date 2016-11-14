@@ -1,16 +1,17 @@
 import os
 
 from . import BaseCommand
+from ..i18n import _
 
 
 class Command(BaseCommand):
     name = os.path.splitext(os.path.basename(__file__))[0]
 
-    description = 'a complete list of group name aliases'
+    description = _('a complete list of group name aliases')
 
     quiet_fields = {
-        'aliasName': 'alias name',
-        'groupName': 'group name',
+        'aliasName': _('alias name'),
+        'groupName': _('group name'),
     }
 
     def fill_arguments(self):

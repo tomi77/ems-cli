@@ -1,12 +1,13 @@
 import os
 
 from . import BaseCommand
+from ..i18n import _
 
 
 class Command(BaseCommand):
     name = os.path.splitext(os.path.basename(__file__))[0]
 
-    description = 'invalidates all group name aliases'
+    description = _('invalidates all group name aliases')
 
     def fill_arguments(self):
         pass
@@ -16,7 +17,7 @@ class Command(BaseCommand):
 
     @staticmethod
     def format_verbose_msg(data):
-        return 'All group name aliases are flushed'
+        return _('All group name aliases are flushed')
 
 
 def main():

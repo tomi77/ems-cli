@@ -1,15 +1,16 @@
 import os
 
 from . import BaseCommand
+from ..i18n import _
 
 
 class Command(BaseCommand):
     name = os.path.splitext(os.path.basename(__file__))[0]
 
-    description = 'Terminate a stream'
+    description = _('terminate a stream')
 
     quiet_fields = {
-        'streamInfo': 'stream info'
+        'streamInfo': _('stream info')
     }
 
     def __init__(self, subparsers=None, type='id'):
@@ -19,14 +20,14 @@ class Command(BaseCommand):
     def fill_arguments(self):
         if self.type == 'id':
             self.parser.add_argument(
-                'id', type=int, help='the uniqueId of the stream')
+                'id', type=int, help=_('the uniqueId of the stream'))
         else:
             self.parser.add_argument(
-                'localStreamName', type=str, help='the name of the stream')
+                'localStreamName', type=str, help=_('the name of the stream'))
         self.parser.add_argument(
             '--permanently', type=int, choices=[0, 1],
-            help='if (1), the corresponding push/pull configuration will '
-                 'also be terminated')
+            help=_('if (1), the corresponding push/pull configuration will '
+                   'also be terminated'))
 
 
 def main_id():

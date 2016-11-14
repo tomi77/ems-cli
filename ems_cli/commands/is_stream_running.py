@@ -1,15 +1,16 @@
 import os
 
 from . import BaseCommand
+from ..i18n import _
 
 
 class Command(BaseCommand):
     name = os.path.splitext(os.path.basename(__file__))[0]
 
-    description = 'checks a specific stream if it is running or not'
+    description = _('checks a specific stream if it is running or not')
 
     quiet_fields = {
-        'Running': 'running?',
+        'Running': _('running?'),
     }
 
     def __init__(self, subparsers=None, type='id'):
@@ -19,10 +20,10 @@ class Command(BaseCommand):
     def fill_arguments(self):
         if self.type == 'id':
             self.parser.add_argument(
-                'id', type=int, help='the uniqueId of the stream')
+                'id', type=int, help=_('the uniqueId of the stream'))
         else:
             self.parser.add_argument(
-                'localStreamName', type=str, help='the name of the stream')
+                'localStreamName', type=str, help=_('the name of the stream'))
 
 
 def main_id():
